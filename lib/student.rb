@@ -20,7 +20,7 @@ DB[:conn].execute(sql)
 
   def self.find_by_name(name)
    sql = <<-SQL
-   SELECT students.name FROM students WHERE name = ? LIMIT 1 
+   SELECT * FROM students WHERE name = ? LIMIT 1 
    SQL
    
    DB[:conn].execute(sql, name).map do |row|
@@ -64,7 +64,7 @@ end
   
   def self.students_below_12th_grade
    sql = <<-SQL
-   SELECT  FROM students WHERE students.grade <= 11 
+   SELECT students.name FROM students WHERE students.grade <= 11 
    
    SQL
 
