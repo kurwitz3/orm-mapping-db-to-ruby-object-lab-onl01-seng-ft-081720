@@ -26,8 +26,7 @@ DB[:conn].execute(sql)
    DB[:CONN].execute(sql, name).map do |row|
      self.new_from_db(row)
    end.first 
- end
-  end
+end
   
   def save
     sql = <<-SQL
