@@ -64,24 +64,26 @@ end
   
   def self.students_below_12th_grade
    sql = <<-SQL
-   SELECT * FROM students WHERE students.grade <= 11 
-   
+    SELECT * FROM students WHERE students.grade <= 11 
    SQL
 
-    DB[:conn].execute(sql).collect do |row|
+   DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
-    end
+  end
 end
 
  def self.all 
- sql = <<-SQL
- SELECT * FROM students
+  sql = <<-SQL
+   SELECT * FROM students
+  SQL
+  
+  DB[:conn].execute(sql).map do |row|
  
- SQL
- DB[:conn].execute(sql).map do |row|
- self.new_from_db(row)
-end 
+  self.new_from_db(row)
+ end 
 end
+
+ def self.first_X_students_in_grade_10
 
 
 
