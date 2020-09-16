@@ -88,7 +88,7 @@ end
    SELECT * FROM students WHERE students.grade = 10 
    SQL
 
-
+      DB[:conn].execute(sql,grade_10)
 
 
 end
