@@ -74,13 +74,10 @@ end
 end
 
  def self.all 
-
- sql = <<-SQL   
- SELECT * FROM students 
+ sql = <<-SQL
  
- 
- SQL  
- end
+ SQL
+end 
 
 
 
