@@ -97,7 +97,7 @@ def self.first_student_in_grade_10
  new = self.first_X_students_in_grade_10(1)
       new.collect do |x|
        self.new_from_db(x) 
-   end 
+   end.first
 end
   
   def self.all_students_in_grade_X(grade)
