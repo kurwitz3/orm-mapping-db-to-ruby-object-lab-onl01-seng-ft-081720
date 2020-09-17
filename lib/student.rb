@@ -98,7 +98,7 @@ def self.first_student_in_grade_10
    SELECT * FROM students WHERE grade = 10 ORDER BY ASC
    SQL
     DB[:conn].execute(sql)
-    end
+  
   end
   
   def self.all_students_in_grade_X(grade)
