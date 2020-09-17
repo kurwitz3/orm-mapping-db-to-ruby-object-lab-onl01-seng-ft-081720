@@ -88,7 +88,7 @@ end
    SELECT * FROM students WHERE grade = 10 LIMIT ?
    SQL
 
-      DB[:conn].execute(sql,grade_10)
+      DB[:conn].execute(sql)
 
  end
 end
