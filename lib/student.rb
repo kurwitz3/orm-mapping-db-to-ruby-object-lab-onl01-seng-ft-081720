@@ -98,6 +98,7 @@ def self.first_student_in_grade_10
      SELECT * FROM students WHERE grade = 10 
      
      SQL
+     DB[:conn].execute(sql,grade_10).collect do |row|
        self.new_from_db(x) 
    end.first
 end
