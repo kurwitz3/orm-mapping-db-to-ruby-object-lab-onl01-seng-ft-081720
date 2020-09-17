@@ -94,10 +94,11 @@ end
  end
  
  def self.first_student_in_grade_10 
-     = self.first_X_students_in_grade_10(1)
-    s.map do |i|
+    new  = self.first_X_students_in_grade_10(1)
+    new .map do |i|
       self.new_from_db(i)
-    end[0]
-end
+    end
+    [0]
+
 end
 end
